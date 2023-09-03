@@ -1,0 +1,24 @@
+TAD Bolsa (Colección de elementos no ordenados que pueden estar repetidos).
+
+ESPECIFICACIÓN INFORMAL
+Operaciones
+CrearBolsa -> Crea una bolsa vacía.
+Añadir(Bolsa, elemento) -> Añade un elemento a la bolsa.
+BolsaVacia (Bolsa) -> Verifica que la bolsa no tiene elementos.
+Dentro (elemento, Bolsa) -> Verifica si un elemento pertenece a la bolsa
+Cuantos (elemento, Bolsa) -> Determina el número de veces que se encuentra un elemento en una bolsa
+Union (Bolsa1, Bolsa2) -> Devuelve una bolsa con los elementos de los dos argumentos.
+Total (Bolsa) -> Devuelve el número de elementos de una bolsa.
+
+ESPECIFICACIÓN FORMAL
+TAD Cadena (Secuencia de caracteres ASCII terminada por un byte nulo).
+
+Sintaxis
+
+*CrearBolsa -> Bolsa
+*Añadir (Bolsa, elemento) -> Bolsa
+BolsaVacia (Bolsa) -> boolean
+Dentro (elemento, Bolsa) -> boolean
+Cuantos (elemento, Bolsa) -> entero
+Union (Bolsa1, Bolsa2) -> Bolsa
+Total (Bolsa) ->	Bolsa

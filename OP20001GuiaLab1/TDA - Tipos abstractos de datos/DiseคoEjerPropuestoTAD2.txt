@@ -1,0 +1,61 @@
+Definimos un string como una serie de caracteres almacenados en un vector. Diseñe 
+el TAD correspondiente a un string con las funciones imprimir, copiar, buscar 
+carácter, convertir a mayúsculas o minúsculas. Luego implemente la solución en 
+Dev C
+
+/*definicion de valor*/
+abstract typedef<<char>> String; /*es una secuencia de caracteres
+condition String Є {a-z, A-Z};
+
+/*definicion de operador*/
+/*La siguiente función permite imprimir la serie de caracteres.*/
+abstract void imprimir(cadena);
+String cadena;
+
+Precondition cadena != null;
+Postcondition
+	 /
+Imprimir=|cout<<cadena<<endl;
+	 \
+
+/*definicion de operador*/
+/*La siguiente función permite copiar la serie de caracteres.*/
+abstract String copiar(cadena);
+String cadena, cadena2;
+Precondition cadena != null;
+Postcondition
+	 /  
+  Copiar=|strcpy(cadena2, cadena);
+	 \
+
+/*definicion de operador*/
+/*La siguiente función permite buscar un caracteer en la serie de caracteres.*/
+abstract void buscar(cadena, buscado);
+String cadena;
+int i=0, c=0;
+Precondition cadena != null;
+Postcondition
+	 /
+	 | Mientras cadena[i]!='\0'
+	 | 	Si cadena[i]==buscado
+	 |	     cout<<"Caracter encontrado en la posicion "<<i<<endl;
+	 |	     c++;
+  Buscar=|	Fin Si
+	 | ++i;
+	 | Fin Mientras	
+	 | Si c==0
+	 |	cout<<"Caracter no encontrado";
+	 | Fin Si	
+	 \
+
+
+/*definicion de operador*/
+/*La siguiente función permite convertir a minusculas la serie de caracteres.*/
+abstract String convertir(cadena);
+String cadena, cadenaCopiada;
+int i, longitudCadena;
+Precondition cadena != null;
+Postcondition
+	 / 
+  Copiar=|strlwr(cadena);
+	 \
